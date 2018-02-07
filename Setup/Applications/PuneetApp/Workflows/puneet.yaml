@@ -1,0 +1,17 @@
+description: My First App
+envName: QA env
+templatized: false
+notificationRules:
+  - conditions:
+      - FAILED
+    executionScope: WORKFLOW
+    notificationGroups:
+      - Account Administrator
+failureStrategies:
+  - failureTypes:
+      - APPLICATION_ERROR
+    executionScope: WORKFLOW
+    repairActionCode: ROLLBACK_WORKFLOW
+    retryCount: 0
+harnessApiVersion: '1.0'
+type: CANARY
