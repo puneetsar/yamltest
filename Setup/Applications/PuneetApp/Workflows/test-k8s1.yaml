@@ -11,6 +11,21 @@ phases:
         stepsInParallel: false
         steps:
           - name: Kubernetes Service Setup
+            properties:
+                serviceType: LoadBalancer
+                minAutoscaleInstances: 0
+                targetPort: 8080
+                useAutoscaler: false
+                replicationControllerName: ${app.name}.${service.name}.${env.name}
+                fixedInstances: '1'
+                protocol: TCP
+                port: 80
+                desiredInstanceCount: fixedInstances
+                maxInstances: 1
+                targetCpuUtilizationPercentage: 0
+                resizeStrategy: DOWNSIZE_OLD_FIRST
+                serviceSteadyStateTimeout: 1
+                maxAutoscaleInstances: 0
             type: KUBERNETES_SETUP
         type: CONTAINER_SETUP
       - name: Deploy Containers
