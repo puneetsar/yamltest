@@ -14,7 +14,7 @@ phases:
             properties:
                 serviceType: LoadBalancer
                 minAutoscaleInstances: 0
-                targetPort: 8080
+                targetPort: 80
                 useAutoscaler: false
                 replicationControllerName: ${app.name}.${service.name}.${env.name}
                 fixedInstances: '1'
