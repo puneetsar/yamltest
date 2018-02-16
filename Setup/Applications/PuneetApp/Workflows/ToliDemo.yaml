@@ -11,6 +11,17 @@ phases:
         stepsInParallel: false
         steps:
           - name: Kubernetes Service Setup
+            properties:
+                replicationControllerName: ${app.name}.${service.name}.${env.name}
+                serviceType: None
+                desiredInstanceCount: runningInstances
+                minAutoscaleInstances: 0
+                maxInstances: 1
+                targetCpuUtilizationPercentage: 0
+                resizeStrategy: RESIZE_NEW_FIRST
+                serviceSteadyStateTimeout: 10
+                useAutoscaler: false
+                maxAutoscaleInstances: 0
             type: KUBERNETES_SETUP
         type: CONTAINER_SETUP
       - name: Deploy Containers
