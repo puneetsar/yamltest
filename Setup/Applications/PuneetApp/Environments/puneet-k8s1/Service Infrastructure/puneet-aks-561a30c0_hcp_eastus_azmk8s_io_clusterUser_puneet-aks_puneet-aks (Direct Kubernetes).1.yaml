@@ -1,0 +1,12 @@
+masterUrl: https://puneet-aks-561a30c0.hcp.eastus.azmk8s.io
+username: clusterUser_puneet-aks_puneet-aks
+password: safeharness:OlbOgELNQHaQxXIKXtKwfw
+caCert: safeharness:T3UCZMr7RIuRu8XAvqK-7Q
+clientCert: safeharness:U63xUTYRQ46VIMNN58nN-A
+clientKey: safeharness:h6jWf7tcQYiv8218FOugww
+namespace: default
+serviceName: ToliDemo
+infraMappingType: DIRECT_KUBERNETES
+deploymentType: KUBERNETES
+harnessApiVersion: '1.0'
+type: DIRECT_KUBERNETES
