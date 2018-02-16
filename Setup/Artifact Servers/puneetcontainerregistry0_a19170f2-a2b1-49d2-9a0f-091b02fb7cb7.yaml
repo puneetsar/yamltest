@@ -1,0 +1,5 @@
+url: https://puneetContainerRegistry007.azurecr.io/v2/
+username: a19170f2-a2b1-49d2-9a0f-091b02fb7cb7
+password: safeharness:XBx3J54PSWKkyhsHiVAGbA
+harnessApiVersion: '1.0'
+type: DOCKER
