@@ -16,9 +16,6 @@ phases:
         type: CONTAINER_SETUP
       - name: Deploy Containers
         stepsInParallel: false
-        steps:
-          - name: Upgrade Containers
-            type: KUBERNETES_DEPLOY
         type: CONTAINER_DEPLOY
       - name: Verify Service
         stepsInParallel: false
