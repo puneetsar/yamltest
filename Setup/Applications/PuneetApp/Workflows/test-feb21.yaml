@@ -40,6 +40,13 @@ phases:
         type: CONTAINER_DEPLOY
       - name: Verify Service
         stepsInParallel: false
+        steps:
+          - name: Http
+            properties:
+                method: GET
+                assertion: ${httpResponseCode}==200
+                url: http://puneet-random.com1/
+            type: HTTP
         type: VERIFY_SERVICE
       - name: Wrap Up
         stepsInParallel: false
