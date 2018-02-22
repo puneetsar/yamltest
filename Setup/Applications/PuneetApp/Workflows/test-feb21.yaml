@@ -15,6 +15,13 @@ phases:
         type: CONTAINER_SETUP
       - name: Deploy Containers
         stepsInParallel: false
+        steps:
+          - name: KubernetesDeploy
+            properties:
+                commandName: Resize Replication Controller
+                instanceUnitType: COUNT
+                instanceCount: 1
+            type: KUBERNETES_DEPLOY
         type: CONTAINER_DEPLOY
       - name: Verify Service
         stepsInParallel: false
