@@ -94,7 +94,7 @@ failureStrategies:
   - failureTypes:
       - APPLICATION_ERROR
     executionScope: WORKFLOW
-    repairActionCode: ROLLBACK_WORKFLOW
+    repairActionCode: MANUAL_INTERVENTION
     retryCount: 0
 harnessApiVersion: '1.0'
 type: BASIC
