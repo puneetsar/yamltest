@@ -18,13 +18,6 @@ phases:
         steps:
           - name: Upgrade Containers
             type: KUBERNETES_DEPLOY
-          - name: Jenkins
-            properties:
-                jobName: ciui-cert-renew
-                jenkinsConfigId: lR7AV4TbT5Wt51FDeCouIw
-                timeoutMillis: 600000
-                jobParameters: null
-            type: JENKINS
         type: CONTAINER_DEPLOY
       - name: Verify Service
         stepsInParallel: false
