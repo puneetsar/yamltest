@@ -54,6 +54,11 @@ rollbackPhases:
             type: KUBERNETES_SETUP_ROLLBACK
         phaseStepNameForRollback: Setup Container
         type: CONTAINER_SETUP
+      - name: Verify Service
+        statusForRollback: SUCCESS
+        stepsInParallel: false
+        phaseStepNameForRollback: Verify Service
+        type: VERIFY_SERVICE
       - name: Wrap Up
         stepsInParallel: false
         type: WRAP_UP
