@@ -1,4 +1,3 @@
 harnessApiVersion: '1.0'
-type: AWS
-accessKey: AKIAIVRKRUMJ3LAVBMSQ
-secretKey: safeharness:3GdpE1Z7SwWJrZpNdPnspg
+type: GCP
+serviceAccountKeyFileContent: safeharness:xhewdopVTKSQnbHuSd4xAA
