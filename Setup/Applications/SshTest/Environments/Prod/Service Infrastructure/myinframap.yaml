@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: PHYSICAL_DATA_CENTER_SSH
+computeProviderName: physical_data_center
+computeProviderType: PHYSICAL_DATA_CENTER
+connection: User/Password
+deploymentType: SSH
+hostNames:
+  - 104.209.40.95
+infraMappingType: PHYSICAL_DATA_CENTER_SSH
+serviceName: legacy
