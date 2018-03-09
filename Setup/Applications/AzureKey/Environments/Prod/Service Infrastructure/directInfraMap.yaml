@@ -6,7 +6,7 @@ clientKey: safeharness:wHz0edehRquIBb9nBi8OJQ
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
 masterUrl: https://puneet-aks-561a30c0.hcp.eastus.azmk8s.io:443
-namespace: default
+namespace: default1
 password: safeharness:STSqNk4wTDWg87-SW25opQ
 serviceName: keytest
 username: clusterUser_puneet-aks_puneet-aks
