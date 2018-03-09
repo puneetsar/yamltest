@@ -1,0 +1,14 @@
+harnessApiVersion: '1.0'
+type: DIRECT_KUBERNETES
+caCert: safeharness:lufObK9qRVSvheUD50AWDg
+clientCert: safeharness:Or7lobZmT9ScObHvZ41qJw
+clientKey: safeharness:8Mary9jHQqKaiOxSvIa1cQ
+computeProviderName: DIRECT
+computeProviderType: DIRECT
+deploymentType: KUBERNETES
+infraMappingType: DIRECT_KUBERNETES
+masterUrl: https://puneet-aks-561a30c0.hcp.eastus.azmk8s.io:443
+namespace: default
+password: safeharness:f0SnEhJHS5y4XHuhNrJvuw
+serviceName: keytest
+username: clusterUser_puneet-aks_puneet-aks
