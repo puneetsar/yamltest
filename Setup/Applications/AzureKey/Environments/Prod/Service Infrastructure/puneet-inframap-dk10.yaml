@@ -7,6 +7,6 @@ computeProviderName: kubernetes_cluster2
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
-namespace: default
+namespace: default1
 password: safeharness:zV256bjFQ8OH3DOQ6YJK4g
 serviceName: keytest
