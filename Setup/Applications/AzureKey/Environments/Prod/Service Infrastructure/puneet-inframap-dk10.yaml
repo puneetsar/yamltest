@@ -7,6 +7,7 @@ computeProviderName: kubernetes_cluster2
 computeProviderType: KUBERNETES_CLUSTER
 deploymentType: KUBERNETES
 infraMappingType: DIRECT_KUBERNETES
-namespace: default1
+masterUrl: https://puneet-aks-561a30c0.hcp.eastus.azmk8s.io:443
+namespace: default2
 password: safeharness:zV256bjFQ8OH3DOQ6YJK4g
 serviceName: keytest
