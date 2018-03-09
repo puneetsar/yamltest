@@ -33,7 +33,7 @@ phases:
                 maxInstances: 10
                 targetCpuUtilizationPercentage: 0
                 useAutoscaler: false
-                resizeStrategy: RESIZE_NEW_FIRST
+                resizeStrategy: DOWNSIZE_OLD_FIRST
                 serviceSteadyStateTimeout: 10
                 maxAutoscaleInstances: 0
         stepsInParallel: false
