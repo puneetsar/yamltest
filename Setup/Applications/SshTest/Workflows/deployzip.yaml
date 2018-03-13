@@ -16,6 +16,7 @@ notificationRules:
 phases:
   - type: WINRM
     computeProviderName: physical_data_center
+    daemonSet: false
     infraMappingName: winrminframap
     name: Phase 1
     phaseSteps:
@@ -51,9 +52,13 @@ phases:
         stepsInParallel: false
     provisionNodes: false
     serviceName: legacy
+preDeploymentSteps:
+  - type: ARTIFACT_CHECK
+    name: Artifact Check
 rollbackPhases:
   - type: WINRM
     computeProviderName: physical_data_center
+    daemonSet: false
     infraMappingName: winrminframap
     name: Rollback Phase 1
     phaseNameForRollback: Phase 1
