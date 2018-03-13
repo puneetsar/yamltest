@@ -1,0 +1,8 @@
+type: KUBERNETES_CLUSTER
+caCert: amazonkms:jbXVzc59S-y9L-B-1PgKZQ
+clientCert: amazonkms:F8TrzzMAReaAaVl-Uq7WwA
+clientKey: amazonkms:GRVhBMbzSae6_8p0wSQeKA
+clientKeyPassphrase: safeharness:JteIsXVzSJ2-vgJ7njQ9Aw
+masterUrl: https://puneet-aks-561a30c0.hcp.eastus.azmk8s.io:443
+password: safeharness:cHT4jMCFQ_aWrZA6DtWNpg
+username: clusterUser_puneet-aks_puneet-aks
