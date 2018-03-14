@@ -32,6 +32,11 @@ phases:
         stepsInParallel: false
       - type: DISABLE_SERVICE
         name: Disable Service
+        steps:
+          - type: COMMAND
+            name: TestCommand
+            properties:
+                commandName: TestCommand
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
