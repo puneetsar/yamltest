@@ -38,7 +38,7 @@ phases:
             properties:
                 commandPath: 'c:'
                 host: 104.209.40.95
-                scriptString: dir
+                scriptString: Powershell Get-ChildItem
                 timeoutMillis: 5000
                 sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
         stepsInParallel: false
