@@ -39,7 +39,7 @@ phases:
                 commandPath: 'c:'
                 host: 104.209.40.95
                 scriptString: Powershell Get-ChildItem
-                timeoutMillis: 5000
+                timeoutMillis: 60000
                 sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
         stepsInParallel: false
       - type: DEPLOY_SERVICE
