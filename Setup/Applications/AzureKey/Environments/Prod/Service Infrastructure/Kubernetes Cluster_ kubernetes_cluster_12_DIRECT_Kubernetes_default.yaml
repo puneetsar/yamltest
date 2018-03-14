@@ -1,0 +1,12 @@
+harnessApiVersion: '1.0'
+type: DIRECT_KUBERNETES
+caCert: safeharness:-hOTts6iQlu3eeE8EPZAgg
+clientCert: safeharness:RPOfkR33S62gR8CqX-eFcg
+clientKey: safeharness:qxhq3uS8Qaqjn27O5O8oZw
+computeProviderName: kubernetes_cluster_12
+computeProviderType: KUBERNETES_CLUSTER
+deploymentType: KUBERNETES
+infraMappingType: DIRECT_KUBERNETES
+namespace: default
+password: safeharness:wHz0j9a-RmOPkTzVqyYq9Q
+serviceName: keytest
