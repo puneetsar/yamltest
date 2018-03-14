@@ -41,10 +41,6 @@ phases:
                 scriptString: dir
                 timeoutMillis: 5000
                 sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
-          - type: COMMAND
-            name: TestCommand
-            properties:
-                commandName: TestCommand
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
