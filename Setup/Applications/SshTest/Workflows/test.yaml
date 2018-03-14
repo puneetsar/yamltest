@@ -33,10 +33,6 @@ phases:
       - type: DISABLE_SERVICE
         name: Disable Service
         steps:
-          - type: COMMAND
-            name: TestCommand
-            properties:
-                commandName: TestCommand
           - type: SHELL_SCRIPT
             name: Shell Script
             properties:
@@ -45,6 +41,10 @@ phases:
                 scriptString: dir
                 timeoutMillis: 5000
                 sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
+          - type: COMMAND
+            name: TestCommand
+            properties:
+                commandName: TestCommand
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
