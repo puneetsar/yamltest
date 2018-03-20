@@ -41,6 +41,16 @@ phases:
                 scriptString: Powershell Get-ChildItem
                 timeoutMillis: 60000
                 sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
+          - type: SHELL_SCRIPT
+            name: Shell Script New
+            properties:
+                commandPath: 'd:'
+                host: 10.0.0.1
+                scriptString: |-
+                    dir
+                    mkdir temp
+                timeoutMillis: 60000
+                sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
