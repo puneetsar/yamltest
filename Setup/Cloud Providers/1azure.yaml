@@ -1,0 +1,5 @@
+harnessApiVersion: '1.0'
+type: AZURE
+clientId: 2d7ae800-e1dd-4098-97f8-f6ae330abf82
+key: amazonkms:LRJQJmU5TaWmAYqEz8PSBg
+tenantId: b229b2bb-5f33-4d22-bce0-730f6474e906
