@@ -1,0 +1,6 @@
+harnessApiVersion: '1.0'
+type: APP_DYNAMICS
+accountName: wingsnfr
+controllerUrl: https://wingsnfr.saas.appdynamics.com/controller
+password: amazonkms:p7uGi1PVQeWd18XGy8sVlA
+username: wingsnfr
