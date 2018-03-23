@@ -1,5 +1,5 @@
 harnessApiVersion: '1.0'
 type: DOCKER
-password: amazonkms:Mv8qxMgUROmHJtHO743rzg
-url: https://puneetcontainerregistry007.azurecr.io/v2/
+password: amazonkms:XBx3J54PSWKkyhsHiVAGbA
+url: https://puneetContainerRegistry007.azurecr.io/v2/
 username: 2d7ae800-e1dd-4098-97f8-f6ae330abf82
