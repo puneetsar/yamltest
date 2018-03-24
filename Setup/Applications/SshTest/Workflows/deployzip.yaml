@@ -37,6 +37,13 @@ phases:
             name: TestCommand
             properties:
                 commandName: TestCommand
+          - type: SHELL_SCRIPT
+            name: Shell Script
+            properties:
+                commandPath: 'c:'
+                host: 10.0.0.1
+                scriptString: dir
+                timeoutMillis: 60000
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
