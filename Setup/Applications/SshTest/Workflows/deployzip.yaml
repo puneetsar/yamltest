@@ -44,6 +44,15 @@ phases:
                 host: 10.0.0.1
                 scriptString: dir
                 timeoutMillis: 60000
+          - type: SHELL_SCRIPT
+            name: Shell Script_2
+            properties:
+                commandPath: 'c:'
+                host: 10.0.0.1
+                scriptString: Powershell Get-ChildItem
+                timeoutMillis: 60000
+                connectionType: WINRM
+                WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
