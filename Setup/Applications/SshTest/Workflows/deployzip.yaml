@@ -36,9 +36,9 @@ phases:
           - type: SHELL_SCRIPT
             name: Shell Script_2
             properties:
-                commandPath: 'c:'
+                commandPath: c:\
                 host: 104.209.40.95
-                scriptString: powercfg /list $T dir $T echo "Hello World"
+                scriptString: powercfg /list & dir & echo "Hello World"
                 timeoutMillis: 60000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
