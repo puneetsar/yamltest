@@ -38,9 +38,7 @@ phases:
             properties:
                 commandPath: 'c:'
                 host: 104.209.40.95
-                scriptString: |-
-                    Powershell Write-Host "hello world"
-                    Get-NetAdapter
+                scriptString: Powershell Write-Host "hello world"
                 timeoutMillis: 60000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
