@@ -38,10 +38,7 @@ phases:
             properties:
                 commandPath: 'c:'
                 host: 104.209.40.95
-                scriptString: |-
-                    powercfg /list
-                    dir
-                    echo "Hello World"
+                scriptString: powercfg /list $T dir $T echo "Hello World"
                 timeoutMillis: 60000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
