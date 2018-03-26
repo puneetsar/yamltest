@@ -37,9 +37,10 @@ phases:
             name: Shell Script_2
             properties:
                 commandPath: 'c:'
-                host: 10.0.0.1
+                host: 104.209.40.95
                 scriptString: Powershell Get-ChildItem
                 timeoutMillis: 60000
+                winRmConfigRef: Jwff2yD9RyGjT9Ls0xfJrA
                 connectionType: WINRM
                 WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
         stepsInParallel: false
