@@ -36,6 +36,7 @@ phases:
           - type: SHELL_SCRIPT
             name: Shell Script_2
             properties:
+                connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
                 commandPath: c:\
                 host: 104.209.40.95
                 scriptString: powercfg /list & dir & echo "Hello World"
