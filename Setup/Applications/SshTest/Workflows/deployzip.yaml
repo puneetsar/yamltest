@@ -40,7 +40,7 @@ phases:
                 commandPath: c:\
                 host: 104.209.40.95
                 scriptString: powercfg /list & dir & echo "Hello World" & systeminfo
-                timeoutMillis: 60000
+                timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
                 WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
