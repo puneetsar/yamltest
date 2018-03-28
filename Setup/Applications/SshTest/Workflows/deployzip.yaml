@@ -45,7 +45,7 @@ phases:
                     echo "Hello World"
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
-                connectionType: SSH
+                connectionType: WINRM
                 WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
         stepsInParallel: false
       - type: DEPLOY_SERVICE
