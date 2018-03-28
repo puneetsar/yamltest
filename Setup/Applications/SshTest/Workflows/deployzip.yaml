@@ -45,7 +45,6 @@ phases:
                     $prompt = "My name is $name"
                     Write-Host $prompt
                     Write-Host "Hello World"
-                    Get-Process
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
