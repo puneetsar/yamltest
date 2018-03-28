@@ -38,11 +38,14 @@ phases:
             properties:
                 connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
                 commandPath: c:\
+                scriptType: POWERSHELL
                 host: 104.209.40.95
-                scriptString: Powershell Invoke-Command -ScriptBlock {Invoke-Command -ScriptBlock {echo "Hello World"}; dir}
+                scriptString: |-
+                    dir
+                    echo "Hello World"
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
-                connectionType: WINRM
+                connectionType: SSH
                 WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
         stepsInParallel: false
       - type: DEPLOY_SERVICE
