@@ -41,7 +41,7 @@ phases:
                 scriptType: POWERSHELL
                 host: 104.209.40.95
                 scriptString: |-
-                    $name = 'Don'
+                    $name = "Don"
                     $prompt = "My name is $name"
                     Write-Host $prompt
                 timeoutMillis: 300000
