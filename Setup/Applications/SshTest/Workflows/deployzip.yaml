@@ -41,8 +41,9 @@ phases:
                 scriptType: POWERSHELL
                 host: 104.209.40.95
                 scriptString: |-
-                    dir
-                    echo "Hello World"
+                    $name = 'Don'
+                    $prompt = "My name is $name"
+                    Write-Host $prompt
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
