@@ -39,7 +39,7 @@ phases:
                 connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
                 commandPath: c:\
                 host: 104.209.40.95
-                scriptString: powercfg /list
+                scriptString: Powershell Invoke-Command -ScriptBlock {Invoke-Command -ScriptBlock {echo "Hello World"}; dir}
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
