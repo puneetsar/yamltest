@@ -34,7 +34,7 @@ phases:
         name: Disable Service
         steps:
           - type: SHELL_SCRIPT
-            name: Shell Script_2
+            name: My PowerShell Script
             properties:
                 connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
                 commandPath: c:\
