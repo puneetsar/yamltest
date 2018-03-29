@@ -41,11 +41,10 @@ phases:
                 scriptType: POWERSHELL
                 host: 104.209.40.95
                 scriptString: |-
-                    $name = "Don"
+                    $name = 'Don'
                     $prompt = "My name is $name"
                     Write-Host $prompt
                     Write-Host "Hello World"
-                    ipconfig
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
