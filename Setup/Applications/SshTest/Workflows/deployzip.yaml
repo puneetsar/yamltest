@@ -39,7 +39,7 @@ phases:
                 connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
                 commandPath: c:\
                 scriptType: POWERSHELL
-                host: 104.209.40.95
+                host: 104.209.40.96
                 scriptString: Get-Process | where {$_.cpu -gt 1000}
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
