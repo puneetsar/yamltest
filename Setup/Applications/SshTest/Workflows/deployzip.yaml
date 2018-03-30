@@ -50,7 +50,7 @@ phases:
                     $i++
                     }
                     while ($i -le 2)
-                timeoutMillis: 300000
+                timeoutMillis: 600000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
                 WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
