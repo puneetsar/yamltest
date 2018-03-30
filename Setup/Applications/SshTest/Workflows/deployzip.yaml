@@ -41,15 +41,8 @@ phases:
                 scriptType: POWERSHELL
                 host: 104.209.40.95
                 scriptString: |-
-                    $i = 1
-                    do{
-                    Write-Host "Hello World " $i
-                    Write-Host  "Comedian Siddharth Sagar, best known for his onscreen character Selfie Mausi on The Kapil Sharma Show, has been missing for four months, according to recent reoports. The news about him going missing first came into the public eye after a lady, named Somi Saxena, who claims to be his close friend, shared a Facebook post which stated that Siddharth had been last seen in November and requested people to help her find him. Comedian Siddharth Sagar, best known for his onscreen character Selfie Mausi on The Kapil Sharma Show, has been missing for four months, according to recent reoports. The news about him going missing first came into the public eye after a lady, named Somi Saxena, who claims to be his close friend, shared a Facebook post which stated that Siddharth had been last seen in November and requested people to help her find him. Comedian Siddharth Sagar, best known for his onscreen character Selfie Mausi on The Kapil Sharma Show, has been missing for four months, according to recent reoports. The news about him going missing first came into the public eye after a lady, named Somi Saxena, who claims to be his close friend, shared a Facebook post which stated that Siddharth had been last seen in November and requested people to help her find him. Comedian Siddharth Sagar, best known for his onscreen character Selfie Mausi on The Kapil Sharma Show, has been missing for four months, according to recent reoports. The news about him going missing first came into the public eye after a lady, named Somi Saxena, who claims to be his close friend, shared a Facebook post which stated that Siddharth had been last seen in November and requested people to help her find him."
                     dir
-                    Start-Sleep 1
-                    $i++
-                    }
-                    while ($i -le 1)
+                    junk
                 timeoutMillis: 600000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
