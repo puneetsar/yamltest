@@ -44,7 +44,8 @@ phases:
                     $i = 1
                     do{
                     Write-Host "Hello World " $i
-                    Start-Sleep 5
+                    dir
+                    Start-Sleep 1
                     $i++
                     }
                     while ($i -le 5)
