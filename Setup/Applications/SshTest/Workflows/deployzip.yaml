@@ -40,7 +40,14 @@ phases:
                 commandPath: c:\
                 scriptType: POWERSHELL
                 host: 104.209.40.95
-                scriptString: Get-Process | where {$_.cpu -gt 1000}
+                scriptString: |-
+                    $i = 1
+                    do{
+                    Write-Host "Hello World " $i
+                    Start-Sleep 30
+                    $i++
+                    }
+                    while ($i -le 5)
                 timeoutMillis: 300000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
