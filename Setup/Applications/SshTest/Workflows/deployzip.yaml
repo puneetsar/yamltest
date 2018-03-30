@@ -47,7 +47,7 @@ phases:
                     Start-Sleep 1
                     $i++
                     }
-                    while ($i -le 10)
+                    while ($i -le 3)
                 timeoutMillis: 600000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
