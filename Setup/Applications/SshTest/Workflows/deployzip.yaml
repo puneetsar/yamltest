@@ -41,8 +41,13 @@ phases:
                 scriptType: POWERSHELL
                 host: 104.209.40.95
                 scriptString: |-
-                    dir
-                    junk
+                    $i = 1
+                    do{
+                    Write-Host "Hello World " $i
+                    Start-Sleep 1
+                    $i++
+                    }
+                    while ($i -le 10)
                 timeoutMillis: 600000
                 winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
                 connectionType: WINRM
