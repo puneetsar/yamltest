@@ -32,6 +32,17 @@ phases:
         stepsInParallel: false
       - type: DISABLE_SERVICE
         name: Disable Service
+        steps:
+          - type: SHELL_SCRIPT
+            name: Shell Script
+            properties:
+                connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
+                commandPath: c:\
+                scriptType: POWERSHELL
+                host: 104.209.40.95
+                scriptString: Get-ChildItem
+                timeoutMillis: 3600000
+                connectionType: WINRM
         stepsInParallel: false
       - type: DEPLOY_SERVICE
         name: Deploy Service
