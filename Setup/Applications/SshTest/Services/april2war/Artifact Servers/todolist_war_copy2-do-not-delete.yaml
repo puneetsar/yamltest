@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: JENKINS
+artifactPaths:
+  - target/todolist.war
+jobName: todolist_war_copy2-do-not-delete
+metadataOnly: false
+serverName: Harness Jenkins
