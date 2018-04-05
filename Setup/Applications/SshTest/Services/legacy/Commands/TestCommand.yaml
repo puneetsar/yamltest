@@ -2,8 +2,8 @@ harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
 commandUnits:
-  - command: dir
+  - command: dir;ls
     commandUnitType: EXEC
     name: Exec-0
-    workingDirectory: ${WINGS_RUNTIME_PATH1}
+    workingDirectory: ${WINGS_RUNTIME_PATH}
 targetToAllEnv: true
