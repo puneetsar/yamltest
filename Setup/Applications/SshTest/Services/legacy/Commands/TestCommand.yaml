@@ -2,9 +2,9 @@ harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
 commandUnits:
-  - command: dir
+  - command: dir1
     commandUnitType: EXEC
-    deploymentType: WINRM
+    deploymentType: SSH
     name: Exec-0
     workingDirectory: ${WINGS_RUNTIME_PATH}
 targetToAllEnv: true
