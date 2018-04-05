@@ -5,5 +5,5 @@ commandUnits:
   - command: dir
     commandUnitType: EXEC
     name: Exec-0
-    workingDirectory: ${WINGS_RUNTIME_PATH}
+    workingDirectory: ${WINGS_RUNTIME_PATH1}
 targetToAllEnv: true
