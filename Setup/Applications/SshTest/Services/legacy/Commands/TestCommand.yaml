@@ -4,6 +4,7 @@ commandUnitType: COMMAND
 commandUnits:
   - command: dir
     commandUnitType: EXEC
+    deploymentType: SSH
     name: Exec-0
     workingDirectory: ${WINGS_RUNTIME_PATH}
 targetToAllEnv: true
