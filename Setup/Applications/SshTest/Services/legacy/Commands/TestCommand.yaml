@@ -2,7 +2,7 @@ harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
 commandUnits:
-  - command: dir1
+  - command: dir
     commandUnitType: EXEC
     deploymentType: SSH
     name: Exec-0
