@@ -40,10 +40,6 @@ phases:
             name: Install
             properties:
                 commandName: Install
-          - type: COMMAND
-            name: Start_2
-            properties:
-                commandName: Start
         stepsInParallel: false
       - type: ENABLE_SERVICE
         name: Enable Service
