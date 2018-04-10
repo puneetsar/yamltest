@@ -1,4 +1,0 @@
-harnessApiVersion: '1.0'
-type: INSTALL
-commandUnitType: COMMAND
-targetToAllEnv: true
