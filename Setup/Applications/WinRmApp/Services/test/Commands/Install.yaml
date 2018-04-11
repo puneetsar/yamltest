@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: INSTALL
+commandUnitType: COMMAND
+commandUnits:
+  - command: Write-Host "Installing Service"
+    commandUnitType: EXEC
+    deploymentType: SSH
+    name: Install Service
+    workingDirectory: $WINGS_RUNTIME_PATH
+targetToAllEnv: true
