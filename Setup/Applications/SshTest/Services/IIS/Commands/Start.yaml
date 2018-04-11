@@ -2,7 +2,9 @@ harnessApiVersion: '1.0'
 type: START
 commandUnitType: COMMAND
 commandUnits:
-  - command: Write-Host "Starting Service"
+  - command: |-
+        Write-Host "Starting Service"
+        Write-Host "Making progress"
     commandUnitType: EXEC
     deploymentType: SSH
     name: Start Service
