@@ -4,6 +4,6 @@ defaults:
   - name: BACKUP_PATH
     value: '%USERPROFILE%'
   - name: STAGING_PATH
-    value: $HOME/${app.name}/${service.name}/${env.name}/staging/${timestampId}
+    value: '%USERPROFILE%'
   - name: RUNTIME_PATH
     value: $HOME/${app.name}/${service.name}/${env.name}/runtime
