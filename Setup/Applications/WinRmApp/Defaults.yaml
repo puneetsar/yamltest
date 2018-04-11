@@ -6,4 +6,4 @@ defaults:
   - name: STAGING_PATH
     value: '%USERPROFILE%'
   - name: RUNTIME_PATH
-    value: $HOME/${app.name}/${service.name}/${env.name}/runtime
+    value: '%USERPROFILE%'
