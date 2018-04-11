@@ -1,0 +1,14 @@
+harnessApiVersion: '1.0'
+type: START
+commandUnitType: COMMAND
+commandUnits:
+  - command: Write-Host "Starting Service"
+    commandUnitType: EXEC
+    deploymentType: SSH
+    name: Start Service
+    workingDirectory: $WINGS_RUNTIME_PATH
+  - command: Write-Host "All Running"
+    commandUnitType: PROCESS_CHECK_RUNNING
+    deploymentType: SSH
+    name: Service Running
+targetToAllEnv: true
