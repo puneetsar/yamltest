@@ -2,7 +2,9 @@ harnessApiVersion: '1.0'
 type: INSTALL
 commandUnitType: COMMAND
 commandUnits:
-  - command: Write-Host "Installing Service"
+  - command: |-
+        Write-Host "Installing Service"
+        Get-ChildItem c:\
     commandUnitType: EXEC
     deploymentType: SSH
     name: Install Service
