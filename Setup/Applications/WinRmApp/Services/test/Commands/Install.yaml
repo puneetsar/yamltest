@@ -5,6 +5,7 @@ commandUnits:
   - command: |-
         Write-Host "Installing Service"
         Get-ChildItem c:\
+        dism
     commandUnitType: EXEC
     deploymentType: SSH
     name: Install Service
