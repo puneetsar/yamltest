@@ -6,6 +6,6 @@ commandUnits:
   commandUnitType: EXEC
   deploymentType: SSH
   name: Exec
-  scriptType: BASH
+  scriptType: POWERSHELL
   workingDirectory: 'c:'
 targetToAllEnv: true
