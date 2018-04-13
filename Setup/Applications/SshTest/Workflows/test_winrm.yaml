@@ -38,7 +38,7 @@ phases:
       properties:
         connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
         commandPath: c:\
-        scriptType: POWERSHELL
+        scriptType: BASH
         host: 104.209.40.95
         scriptString: |-
           ls
