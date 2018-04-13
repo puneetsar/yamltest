@@ -40,7 +40,9 @@ phases:
         commandPath: c:\
         scriptType: BASH
         host: 104.209.40.95
-        scriptString: ls
+        scriptString: |-
+          ls
+          echo 'hello world'
         timeoutMillis: 3600000
         connectionType: LOCAL
     stepsInParallel: false
