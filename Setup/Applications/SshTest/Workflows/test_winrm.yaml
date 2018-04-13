@@ -38,9 +38,9 @@ phases:
       properties:
         connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
         commandPath: c:\
-        scriptType: POWERSHELL
+        scriptType: BASH
         host: 104.209.40.95
-        scriptString: Get-ChildItem
+        scriptString: ls
         timeoutMillis: 3600000
         connectionType: LOCAL
     stepsInParallel: false
