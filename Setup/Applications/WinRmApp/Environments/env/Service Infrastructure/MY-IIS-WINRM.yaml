@@ -1,0 +1,10 @@
+harnessApiVersion: '1.0'
+type: PHYSICAL_DATA_CENTER_WINRM
+computeProviderName: physical_data_center
+computeProviderType: PHYSICAL_DATA_CENTER
+deploymentType: WINRM
+hostNames:
+- 104.209.40.95
+infraMappingType: PHYSICAL_DATA_CENTER_WINRM
+serviceName: test
+winRmProfile: puneetWinRmKey2
