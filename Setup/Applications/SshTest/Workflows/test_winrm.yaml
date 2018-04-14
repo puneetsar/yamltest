@@ -44,7 +44,7 @@ phases:
           ls
           echo 'hello world'
         timeoutMillis: 3600000
-        connectionType: LOCAL
+        connectionType: WINRM
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
