@@ -1,0 +1,14 @@
+harnessApiVersion: '1.0'
+type: AWS_SSH
+autoScalingGroup: Abaris__AMI__Test__deploy__v2__QA__Env__1
+computeProviderName: 1aws-key
+computeProviderType: AWS
+connectionType: Wings Key
+deploymentType: SSH
+desiredCapacity: 4
+hostNameConvention: ${host.ec2Instance.privateDnsName}.split('\.')[0]
+infraMappingType: AWS_SSH
+provisionInstances: true
+region: us-east-1
+serviceName: April War
+usePublicDns: false
