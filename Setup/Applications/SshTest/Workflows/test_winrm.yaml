@@ -37,7 +37,7 @@ phases:
       name: Shell Script
       properties:
         connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
-        commandPath: 'c:'
+        commandPath: c:\
         scriptType: POWERSHELL
         host: 104.209.40.95
         scriptString: |-
