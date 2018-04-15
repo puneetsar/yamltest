@@ -45,7 +45,7 @@ phases:
           echo 'hello world'
         timeoutMillis: 3600000
         connectionType: WINRM
-        executeOnDelegate: true
+        executeOnDelegate: false
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
