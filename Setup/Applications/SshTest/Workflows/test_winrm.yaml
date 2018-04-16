@@ -53,7 +53,7 @@ phases:
         scriptType: BASH
         host: 40.125.66.41
         scriptString: |-
-          ls
+          echo 'hello world'
           pwd
         timeoutMillis: 600000
         sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
