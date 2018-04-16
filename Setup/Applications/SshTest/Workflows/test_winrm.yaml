@@ -46,6 +46,15 @@ phases:
         timeoutMillis: 3600000
         connectionType: WINRM
         executeOnDelegate: true
+    - type: SHELL_SCRIPT
+      name: TestExecuteOnDelegate
+      properties:
+        commandPath: c:\temp
+        scriptType: POWERSHELL
+        scriptString: ls
+        timeoutMillis: 600000
+        connectionType: SSH
+        executeOnDelegate: true
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
