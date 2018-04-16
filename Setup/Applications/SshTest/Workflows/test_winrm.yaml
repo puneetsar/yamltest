@@ -49,12 +49,14 @@ phases:
     - type: SHELL_SCRIPT
       name: TestExecuteOnDelegate
       properties:
-        commandPath: c:\temp
-        scriptType: POWERSHELL
+        commandPath: /etc
+        scriptType: BASH
+        host: 40.125.66.41
         scriptString: ls
         timeoutMillis: 600000
+        sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
         connectionType: SSH
-        executeOnDelegate: true
+        executeOnDelegate: false
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
