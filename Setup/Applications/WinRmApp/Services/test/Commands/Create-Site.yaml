@@ -1,4 +1,18 @@
 harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
+commandUnits:
+- command: "Import-Module WebAdministration\nNew-WebAppPool -name \"NewWebSiteAppPool\"\
+    \  -force\n\n$appPool = Get-Item -name \"NewWebSiteAppPool\" \n$appPool.processModel.identityType\
+    \ = \"NetworkService\"\n$appPool.enable32BitAppOnWin64 = 1\n$appPool | Set-Item\n\
+    \nmd \"c:\\Web Sites\\NewWebSite\"\n\n# All on one line\n$site = $site = new-WebSite\
+    \ -name \"NewWebSite\" \n                            -PhysicalPath \"c:\\Web Sites\\\
+    NewWebSite\" \n                            -HostHeader \"home2.west-wind.com\"\
+    \n                            -ApplicationPool \"NewWebSiteAppPool\" \n      \
+    \                      -force"
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Exec
+  scriptType: POWERSHELL
+  workingDirectory: c:\
 targetToAllEnv: true
