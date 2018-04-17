@@ -2,12 +2,14 @@ harnessApiVersion: '1.0'
 type: INSTALL
 commandUnitType: COMMAND
 commandUnits:
-  - command: |-
-        Write-Host "Installing Service"
-        Get-ChildItem c:\
-        dism
-    commandUnitType: EXEC
-    deploymentType: SSH
-    name: Install Service
-    workingDirectory: $WINGS_RUNTIME_PATH
+- command: |-
+    Write-Host "Installing Service"
+    Get-ChildItem c:\
+    dism
+    Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Install Service
+  scriptType: POWERSHELL
+  workingDirectory: $WINGS_RUNTIME_PATH
 targetToAllEnv: true
