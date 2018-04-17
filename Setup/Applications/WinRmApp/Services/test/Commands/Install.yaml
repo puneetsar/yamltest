@@ -4,8 +4,6 @@ commandUnitType: COMMAND
 commandUnits:
 - command: |-
     Write-Host "Installing Service"
-    Get-ChildItem c:\
-    dism
     Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole
   commandUnitType: EXEC
   deploymentType: SSH
