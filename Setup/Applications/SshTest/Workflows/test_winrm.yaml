@@ -37,6 +37,7 @@ phases:
       name: Shell Script
       properties:
         connectionAttributes: nu1YJHFmToGzg8cPgOHsnw
+        commandPath: c:\temp
         scriptType: BASH
         host: 104.209.40.95
         scriptString: |-
