@@ -5,7 +5,7 @@ commandUnits:
 - command: |-
     Import-Module WebAdministration
     $siteName="Default Web Site"
-    $appName="demo"
+    $appName="harness-demo"
     $deploymentId=[guid]::NewGuid().ToString()
     $artifactFilename = $env:TEMP + "\" + $deploymentId + ".zip"
     $appPhysicalDirectory=$env:SystemDrive + "\App\" + $deploymentId
