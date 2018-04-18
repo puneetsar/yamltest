@@ -9,11 +9,19 @@ commandUnits:
     $deploymentId=[guid]::NewGuid().ToString()
     $artifactFilename = $env:TEMP + "\" + $deploymentId + ".zip"
     $appPhysicalDirectory=$env:SystemDrive + "\App\" + $deploymentId
+
+    Write-Host "Starting Deployment [id:]" $deploymentId
+
     Write-Host "Downloading artifact file to" $artifactFilename
     Invoke-WebRequest -Uri https://harnessbuildshare.blob.core.windows.net/build/testapp/test-app-1.0.zip -OutFile $artifactFilename
+    Write-Host "Extracting package.."
     Expand-Archive -Path $artifactFilename -DestinationPath $appPhysicalDirectory
+
+    Write-Host "Creating Application.."
     $VirtualAppPath = 'IIS:\Sites\' + $siteName + '\' + $appName
     New-Item -Path $VirtualAppPath -Type Application -PhysicalPath (Get-ChildItem $appPhysicalDirectory)[0].FullName -Force
+
+    Write-Host "Finished [Success]."
   commandUnitType: EXEC
   deploymentType: SSH
   name: Install Service
