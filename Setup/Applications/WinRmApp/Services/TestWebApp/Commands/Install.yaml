@@ -7,7 +7,7 @@ commandUnits:
     $siteName="Default Web Site"
     $appName="demo"
     $deploymentId=[guid]::NewGuid().ToString()
-    $artifactFilename = $env:TEMP + "\" $deploymentId + ".zip"
+    $artifactFilename = $env:TEMP + "\" + $deploymentId + ".zip"
     $appPhysicalDirectory=$env:SystemDrive + "\App\" + $deploymentId
     Write-Host "Downloading artifact file to" $artifactFilename
     Invoke-WebRequest -Uri https://harnessbuildshare.blob.core.windows.net/build/testapp/test-app-1.0.zip -OutFile $artifactFilename
