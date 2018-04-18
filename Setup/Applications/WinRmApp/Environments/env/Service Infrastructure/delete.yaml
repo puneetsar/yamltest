@@ -5,7 +5,6 @@ computeProviderType: PHYSICAL_DATA_CENTER
 deploymentType: WINRM
 hostNames:
 - 10.0.0.1
-- 10.0.0.2
 infraMappingType: PHYSICAL_DATA_CENTER_WINRM
 serviceName: test
 winRmProfile: harnessadmin-winrm
