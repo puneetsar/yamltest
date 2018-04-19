@@ -1,0 +1,16 @@
+harnessApiVersion: '1.0'
+type: STOP
+commandUnitType: COMMAND
+commandUnits:
+- command: Write-Host "Stopping Service"
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Stop Service
+  scriptType: POWERSHELL
+  workingDirectory: $WINGS_RUNTIME_PATH
+- command: Write-Host "All Stopped"
+  commandUnitType: PROCESS_CHECK_STOPPED
+  deploymentType: SSH
+  name: Service Stopped
+  scriptType: POWERSHELL
+targetToAllEnv: true
