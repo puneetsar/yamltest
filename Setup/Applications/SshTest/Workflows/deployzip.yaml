@@ -40,14 +40,12 @@ phases:
         commandPath: c:\
         scriptType: POWERSHELL
         host: 104.209.40.95
-        scriptString: |-
-          C:\ProgramData\chocolatey\bin\helm.exe init
-          C:\ProgramData\chocolatey\bin\helm.exe hist
+        scriptString: Write-Host 'Hello World'
         timeoutMillis: 600000
         winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
         connectionType: WINRM
         WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
-        executeOnDelegate: true
+        executeOnDelegate: false
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
