@@ -7,5 +7,5 @@ commandUnits:
   deploymentType: SSH
   name: Install Service
   scriptType: POWERSHELL
-  workingDirectory: $WINGS_RUNTIME_PATH
+  workingDirectory: c:\
 targetToAllEnv: true
