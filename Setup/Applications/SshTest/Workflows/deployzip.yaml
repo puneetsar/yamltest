@@ -41,8 +41,8 @@ phases:
         scriptType: POWERSHELL
         host: 104.209.40.95
         scriptString: |-
-          helm init
-          helm hist
+          C:\ProgramData\chocolatey\bin\helm.exe init
+          C:\ProgramData\chocolatey\bin\helm.exe hist
         timeoutMillis: 600000
         winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
         connectionType: WINRM
