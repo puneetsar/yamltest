@@ -41,17 +41,13 @@ phases:
         scriptType: POWERSHELL
         host: 104.209.40.95
         scriptString: |-
-          $i = 1
-          do{
-          Write-Host "Hello World " $i
-          Start-Sleep 1
-          $i++
-          }
-          while ($i -le 3)
+          helm init
+          helm hist
         timeoutMillis: 600000
         winRmConfigRef: nu1YJHFmToGzg8cPgOHsnw
         connectionType: WINRM
         WinRmConfigRef: 76nxg14eSquDf1tUtK3qKA
+        executeOnDelegate: true
     stepsInParallel: false
   - type: DEPLOY_SERVICE
     name: Deploy Service
