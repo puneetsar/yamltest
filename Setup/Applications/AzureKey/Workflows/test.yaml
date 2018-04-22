@@ -54,11 +54,6 @@ rollbackPhases:
     name: Deploy Containers
     phaseStepNameForRollback: Deploy Containers
     statusForRollback: SUCCESS
-    steps:
-    - type: KUBERNETES_DEPLOY_ROLLBACK
-      name: Rollback Containers
-      properties:
-        rollback: true
     stepsInParallel: false
   - type: CONTAINER_SETUP
     name: Setup Container
