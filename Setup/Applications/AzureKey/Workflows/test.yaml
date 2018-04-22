@@ -7,12 +7,6 @@ failureStrategies:
   - APPLICATION_ERROR
   repairActionCode: ROLLBACK_WORKFLOW
   retryCount: 0
-notificationRules:
-- conditions:
-  - FAILED
-  executionScope: WORKFLOW
-  notificationGroups:
-  - Account Administrator
 phases:
 - type: KUBERNETES
   computeProviderName: kubernetes_cluster2
