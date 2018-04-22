@@ -42,6 +42,13 @@ phases:
         commandName: Resize Replication Controller
         instanceUnitType: PERCENTAGE
         instanceCount: '100'
+    - type: KUBERNETES_STATE_CHECK
+      name: Kubernetes State Check
+      properties:
+        timeoutMillis: 600000
+        labels:
+        - key: hello
+          value: world
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
