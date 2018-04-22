@@ -59,11 +59,6 @@ rollbackPhases:
     name: Setup Container
     phaseStepNameForRollback: Setup Container
     statusForRollback: SUCCESS
-    steps:
-    - type: KUBERNETES_SETUP_ROLLBACK
-      name: Rollback Kubernetes Setup
-      properties:
-        rollback: true
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
