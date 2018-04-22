@@ -30,7 +30,7 @@ phases:
         fixedInstances: '1'
         desiredInstanceCount: fixedInstances
         maxInstances: 2
-        resizeStrategy: RESIZE_NEW_FIRST
+        resizeStrategy: DOWNSIZE_OLD_FIRST
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
