@@ -22,21 +22,6 @@ phases:
   phaseSteps:
   - type: CONTAINER_SETUP
     name: Setup Container
-    steps:
-    - type: KUBERNETES_SETUP
-      name: Kubernetes Service Setup
-      properties:
-        serviceType: None
-        replicationControllerName: ${app.name}.${service.name}.${env.name}
-        fixedInstances: '1'
-        desiredInstanceCount: fixedInstances
-        minAutoscaleInstances: 0
-        maxInstances: '10'
-        targetCpuUtilizationPercentage: 0
-        useAutoscaler: false
-        resizeStrategy: DOWNSIZE_OLD_FIRST
-        serviceSteadyStateTimeout: 10
-        maxAutoscaleInstances: 0
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
