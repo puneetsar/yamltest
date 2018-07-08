@@ -52,6 +52,16 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Stage Service
+    steps:
+    - type: NEW_RELIC
+      name: NewRelic
+      properties:
+        analysisServerConfigId: bNo1oNWsSG2QSmDWmbguJQ
+        analysisTolerance: LOW
+        applicationId: '107019083'
+        comparisonStrategy: COMPARE_WITH_PREVIOUS
+        executeWithPreviousSteps: false
+        timeDuration: '8'
     stepsInParallel: false
   - type: ROUTE_UPDATE
     name: Route Update
