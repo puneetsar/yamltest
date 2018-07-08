@@ -33,9 +33,14 @@ phases:
         blueGreenConfig:
           primaryService:
             serviceType: LoadBalancer
+            port: 80
+            targetPort: 8080
+            protocol: TCP
           stageService:
             serviceType: LoadBalancer
-        maxInstances: 2
+            port: 80
+            targetPort: 8080
+            protocol: TCP
         resizeStrategy: Add new instances first, then downsize old instances
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
