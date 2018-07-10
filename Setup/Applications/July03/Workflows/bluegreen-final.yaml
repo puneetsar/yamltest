@@ -27,7 +27,7 @@ phases:
       name: Blue/Green Service Setup
       properties:
         replicationControllerName: ${app.name}-${service.name}-${env.name}
-        fixedInstances: '1'
+        fixedInstances: '2'
         blueGreen: true
         desiredInstanceCount: fixedInstances
         blueGreenConfig:
