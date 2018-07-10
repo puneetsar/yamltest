@@ -27,7 +27,7 @@ phases:
       name: Blue/Green Service Setup
       properties:
         replicationControllerName: ${app.name}-${service.name}-${env.name}
-        fixedInstances: '2'
+        fixedInstances: '1'
         blueGreen: true
         desiredInstanceCount: fixedInstances
         blueGreenConfig:
@@ -41,6 +41,7 @@ phases:
             port: 80
             targetPort: 8080
             protocol: TCP
+        maxInstances: 2
         resizeStrategy: Add new instances first, then downsize old instances
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
