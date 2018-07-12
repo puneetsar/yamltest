@@ -27,7 +27,7 @@ phases:
       name: Kubernetes Service Setup
       properties:
         serviceType: Yaml
-        replicationControllerName: ${app.name}-${service.name}-${env.name}
+        replicationControllerName: ${app.name}-${service.name}-${env.name}-${artifact.buildNo}
         fixedInstances: '1'
         useIstioRouteRule: false
         ingressYaml: |-
