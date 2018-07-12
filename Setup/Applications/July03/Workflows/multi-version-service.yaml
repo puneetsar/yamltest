@@ -25,6 +25,44 @@ phases:
     steps:
     - type: KUBERNETES_SETUP
       name: Kubernetes Service Setup
+      properties:
+        replicationControllerName: ${app.name}-${service.name}-${env.name}
+        serviceType: Yaml
+        useIstioRouteRule: false
+        ingressYaml: |-
+          # Required placeholders: ${SERVICE_NAME} and ${SERVICE_PORT}
+          # ---
+          apiVersion: extensions/v1beta1
+          kind: Ingress
+          metadata:
+           name: name-will-be-replaced
+           annotations:
+            ingress.kubernetes.io/rewrite-target: /
+          spec:
+            rules:
+            - http:
+               paths:
+               - path: /path
+                 backend:
+                  serviceName: ${SERVICE_NAME}
+                  servicePort: ${SERVICE_PORT}
+        desiredInstanceCount: runningInstances
+        maxInstances: '2'
+        useIngress: true
+        serviceYaml: |-
+          kind: Service
+          apiVersion: v1
+          metadata:
+            name: my-service-${artifact.buildNo}
+          spec:
+            selector:
+              app: MyApp
+            ports:
+            - protocol: TCP
+              port: 80
+              targetPort: 8080
+        resizeStrategy: RESIZE_NEW_FIRST
+        serviceSteadyStateTimeout: 10
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
