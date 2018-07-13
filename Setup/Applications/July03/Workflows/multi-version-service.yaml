@@ -49,7 +49,6 @@ phases:
                   servicePort: ${SERVICE_PORT}
         desiredInstanceCount: fixedInstances
         useIngress: true
-        maxInstances: 2
         serviceYaml: |-
           kind: Service
           apiVersion: v1
