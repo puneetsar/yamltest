@@ -27,7 +27,7 @@ phases:
       name: Kubernetes Service Setup
       properties:
         serviceType: Yaml
-        replicationControllerName: ${app.name}-${service.name}-${env.name}-${workflow.releaseNo}
+        replicationControllerName: ${app.name}-${service.name}-${env.name}
         fixedInstances: '1'
         useIstioRouteRule: false
         ingressYaml: |-
@@ -49,6 +49,7 @@ phases:
                   servicePort: ${SERVICE_PORT}
         desiredInstanceCount: fixedInstances
         useIngress: true
+        maxInstances: 2
         serviceYaml: |-
           kind: Service
           apiVersion: v1
