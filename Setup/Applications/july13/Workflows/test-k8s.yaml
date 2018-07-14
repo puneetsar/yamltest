@@ -25,6 +25,13 @@ phases:
     steps:
     - type: KUBERNETES_SETUP
       name: Kubernetes Service Setup
+      properties:
+        replicationControllerName: ${app.name}-${service.name}-${env.name}
+        fixedInstances: '1'
+        desiredInstanceCount: fixedInstances
+        maxInstances: 2
+        resizeStrategy: RESIZE_NEW_FIRST
+        serviceSteadyStateTimeout: 10
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
