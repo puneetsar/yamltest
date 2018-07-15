@@ -26,7 +26,7 @@ phases:
     - type: KUBERNETES_SETUP
       name: Kubernetes Service Setup
       properties:
-        serviceType: ClusterIP
+        serviceType: Yaml
         ingressYaml: |-
           # Required placeholders: ${SERVICE_NAME} and ${SERVICE_PORT}
           # ---
@@ -47,6 +47,18 @@ phases:
         minAutoscaleInstances: 1
         useIngress: true
         targetPort: 8080
+        serviceYaml: |-
+          kind: Service
+          apiVersion: v1
+          metadata:
+            name: my-service
+          spec:
+            selector:
+              rev: ${workflow.releaseNo}
+            ports:
+            - protocol: TCP
+              port: 80
+              targetPort: 8080
         useAutoscaler: true
         replicationControllerName: ${app.name}-${service.name}-${env.name}-${workflow.releaseNo}
         fixedInstances: '1'
@@ -54,7 +66,6 @@ phases:
         useIstioRouteRule: false
         port: 80
         desiredInstanceCount: fixedInstances
-        maxInstances: 2
         targetCpuUtilizationPercentage: 70
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
