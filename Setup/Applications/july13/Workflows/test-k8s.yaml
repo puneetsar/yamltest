@@ -26,12 +26,39 @@ phases:
     - type: KUBERNETES_SETUP
       name: Kubernetes Service Setup
       properties:
+        serviceType: ClusterIP
+        ingressYaml: |-
+          # Required placeholders: ${SERVICE_NAME} and ${SERVICE_PORT}
+          # ---
+          apiVersion: extensions/v1beta1
+          kind: Ingress
+          metadata:
+           name: name-will-be-replaced
+           annotations:
+            ingress.kubernetes.io/rewrite-target: /
+          spec:
+            rules:
+            - http:
+               paths:
+               - path: /path
+                 backend:
+                  serviceName: ${SERVICE_NAME}
+                  servicePort: ${SERVICE_PORT}
+        minAutoscaleInstances: 1
+        useIngress: true
+        targetPort: 8080
+        useAutoscaler: true
         replicationControllerName: ${app.name}-${service.name}-${env.name}
         fixedInstances: '1'
+        protocol: TCP
+        useIstioRouteRule: false
+        port: 80
         desiredInstanceCount: fixedInstances
         maxInstances: 2
+        targetCpuUtilizationPercentage: 70
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
+        maxAutoscaleInstances: 2
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
