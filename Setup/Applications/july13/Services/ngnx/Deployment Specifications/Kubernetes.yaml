@@ -1,0 +1,25 @@
+harnessApiVersion: '1.0'
+type: KUBERNETES
+advancedConfig: |-
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: nginx-deployment
+    labels:
+      app: nginx
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: nginx
+    template:
+      metadata:
+        labels:
+          app: nginx
+          rev: ${workflow.releaseNo}
+      spec:
+        containers:
+        - name: nginx
+          image: ${DOCKER_IMAGE_NAME}
+          ports:
+          - containerPort: 8080
