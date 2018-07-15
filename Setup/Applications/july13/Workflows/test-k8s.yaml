@@ -48,7 +48,7 @@ phases:
         useIngress: true
         targetPort: 8080
         useAutoscaler: true
-        replicationControllerName: ${app.name}-${service.name}-${env.name}
+        replicationControllerName: ${app.name}-${service.name}-${env.name}-${workflow.releaseNo}
         fixedInstances: '1'
         protocol: TCP
         useIstioRouteRule: false
