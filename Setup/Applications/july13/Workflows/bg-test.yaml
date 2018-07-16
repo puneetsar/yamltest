@@ -26,7 +26,11 @@ phases:
     - type: KUBERNETES_SETUP
       name: Blue/Green Service Setup
       properties:
+        replicationControllerName: bg-${app.name}-${service.name}-${env.name}
+        fixedInstances: '1'
+        useIstioRouteRule: false
         blueGreen: true
+        desiredInstanceCount: fixedInstances
         blueGreenConfig:
           primaryService:
             serviceType: ClusterIP
@@ -38,7 +42,35 @@ phases:
             protocol: TCP
             port: 80
             targetPort: 8080
-        resizeStrategy: RESIZE_NEW_FIRST
+          ingressYaml: |-
+            # Required placeholders: ${PRIMARY_SERVICE_NAME},${PRIMARY_SERVICE_PORT}, ${STAGE_SERVICE_NAME} and ${STAGE_SERVICE_PORT}
+            # ---
+            apiVersion: extensions/v1beta1
+            kind: Ingress
+            metadata:
+             name: name-will-be-replaced
+             annotations:
+              ingress.kubernetes.io/ingress-class:nginx
+            spec:
+              rules:
+              - host: bg.yourhostname.k8s.demo.io
+                http:
+                  paths:
+                  - path: /
+                    backend:
+                      serviceName: ${PRIMARY_SERVICE_NAME}
+                      servicePort: ${PRIMARY_SERVICE_PORT}
+              - host: bg.stage.yourhostname.k8s.demo.io
+                http:
+                  paths:
+                  - path: /
+                    backend:
+                      serviceName: ${STAGE_SERVICE_NAME}
+                      servicePort: ${STAGE_SERVICE_PORT}
+          useIngress: true
+        maxInstances: 2
+        resizeStrategy: Add new instances first, then downsize old instances
+        serviceSteadyStateTimeout: 10
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
