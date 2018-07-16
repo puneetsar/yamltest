@@ -83,8 +83,8 @@ phases:
     - type: KUBERNETES_SWAP_SERVICE_SELECTORS
       name: Swap Primary with Stage
       properties:
-        service2: ${app.name}-${service.name}-${env.name}-stage
-        service1: ${app.name}-${service.name}-${env.name}-primary
+        service2: bg-${app.name}-${service.name}-${env.name}-stage
+        service1: bg-${app.name}-${service.name}-${env.name}-primary
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
