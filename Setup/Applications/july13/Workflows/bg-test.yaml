@@ -48,9 +48,9 @@ phases:
             apiVersion: extensions/v1beta1
             kind: Ingress
             metadata:
-             name: name-will-be-replaced
-             annotations:
-              ingress.kubernetes.io/ingress-class:nginx
+              name: name-will-be-replaced
+              annotations:
+               ingress.kubernetes.io/ingress-class:nginx
             spec:
               rules:
               - host: bg.yourhostname.k8s.demo.io
@@ -68,7 +68,6 @@ phases:
                       serviceName: ${STAGE_SERVICE_NAME}
                       servicePort: ${STAGE_SERVICE_PORT}
           useIngress: true
-        maxInstances: 2
         resizeStrategy: Add new instances first, then downsize old instances
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
