@@ -1,6 +1,6 @@
 harnessApiVersion: '1.0'
 type: BASIC
-envName: gcp
+envName: gcp1
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -17,7 +17,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: harness-exploration
   daemonSet: false
-  infraMappingName: infra1
+  infraMappingName: us-west1-a_harness-test -GCP_Kubernetes--Google Cloud Platform- harness-exploration- default
   name: Phase 1
   phaseSteps:
   - type: CONTAINER_SETUP
@@ -42,7 +42,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: harness-exploration
   daemonSet: false
-  infraMappingName: infra1
+  infraMappingName: us-west1-a_harness-test -GCP_Kubernetes--Google Cloud Platform- harness-exploration- default
   name: Rollback Phase 1
   phaseNameForRollback: Phase 1
   phaseSteps:
