@@ -28,8 +28,11 @@ phases:
       properties:
         replicationControllerName: ${app.name}-${service.name}-${env.name}-${workflow.releaseNo}
         fixedInstances: '2'
+        serviceType: ClusterIP
+        protocol: TCP
+        port: 80
         desiredInstanceCount: fixedInstances
-        maxInstances: 2
+        targetPort: 8080
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
