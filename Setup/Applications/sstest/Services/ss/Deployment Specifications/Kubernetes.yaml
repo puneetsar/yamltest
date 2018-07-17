@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: KUBERNETES
 advancedConfig: |-
-  apiVersion: apps/v1
+  apiVersion: apps/v1beta1
   kind: StatefulSet
   metadata:
     name: web
