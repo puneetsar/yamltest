@@ -37,9 +37,9 @@ phases:
           apiVersion: extensions/v1beta1
           kind: Ingress
           metadata:
-           name: name-will-be-replaced
-           annotations:
-            ingress.kubernetes.io/rewrite-target: /
+            name: name-will-be-replaced
+            annotations:
+              ingress.kubernetes.io/rewrite-target: /
           spec:
             rules:
             - http:
