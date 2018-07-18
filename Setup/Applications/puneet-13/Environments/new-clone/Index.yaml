@@ -1,4 +1,3 @@
 harnessApiVersion: '1.0'
 type: ENVIRONMENT
-description: Cloned from environment new
 environmentType: PROD
