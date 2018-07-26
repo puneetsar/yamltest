@@ -67,6 +67,13 @@ phases:
       properties:
         service2: ${app.name}-${service.name}-${env.name}-stage
         service1: ${app.name}-${service.name}-${env.name}-primary
+    - type: HTTP
+      name: HTTP
+      properties:
+        method: GET
+        assertion: ${httpResponseCode}==404
+        executeWithPreviousSteps: false
+        url: https://google.com
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
