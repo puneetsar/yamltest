@@ -27,7 +27,9 @@ phases:
       name: Blue/Green Service Setup
       properties:
         replicationControllerName: ${app.name}-${service.name}-${env.name}
+        fixedInstances: '1'
         blueGreen: true
+        desiredInstanceCount: fixedInstances
         blueGreenConfig:
           primaryService:
             serviceType: ClusterIP
@@ -39,7 +41,9 @@ phases:
             protocol: TCP
             port: 80
             targetPort: 8080
-        resizeStrategy: RESIZE_NEW_FIRST
+        maxInstances: 2
+        resizeStrategy: Add new instances first, then downsize old instances
+        serviceSteadyStateTimeout: 10
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
