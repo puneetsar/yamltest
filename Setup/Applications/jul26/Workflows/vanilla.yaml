@@ -25,6 +25,12 @@ phases:
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
+    steps:
+    - type: KUBERNETES_SWAP_SERVICE_SELECTORS
+      name: Swap Service Selectors
+      properties:
+        service2: ${app.name}-${service.name}-${env.name}-stage
+        service1: ${app.name}-${service.name}-${env.name}-primary
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
