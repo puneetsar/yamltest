@@ -63,6 +63,13 @@ phases:
       properties:
         service2: ${STAGE_SERVICE_NAME}
         service1: ${PRIMARY_SERVICE_NAME}
+    - type: HTTP
+      name: HTTP
+      properties:
+        method: GET
+        assertion: ${httpResponseCode}==200
+        executeWithPreviousSteps: false
+        url: http://fail.me
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
