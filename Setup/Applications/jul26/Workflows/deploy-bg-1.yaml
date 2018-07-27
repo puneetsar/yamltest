@@ -92,9 +92,6 @@ rollbackPhases:
   - type: ROUTE_UPDATE
     name: Route Update
     phaseStepNameForRollback: Route Update
-    steps:
-    - type: KUBERNETES_SWAP_SERVICE_SELECTORS
-      name: Swap Primary with Stage
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
