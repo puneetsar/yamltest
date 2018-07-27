@@ -28,6 +28,9 @@ phases:
     steps:
     - type: KUBERNETES_SWAP_SERVICE_SELECTORS
       name: Swap Service Selectors
+      properties:
+        service2: ${STAGE_SERVICE_NAME}
+        service1: ${PRIMARY_SERVICE_NAME}
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
