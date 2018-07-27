@@ -47,14 +47,6 @@ phases:
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
-    steps:
-    - type: KUBERNETES_DEPLOY
-      name: Upgrade Containers
-      properties:
-        downsizeInstanceUnitType: PERCENTAGE
-        instanceUnitType: PERCENTAGE
-        instanceCount: 100
-        downsizeInstanceCount: 100
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Stage Service
