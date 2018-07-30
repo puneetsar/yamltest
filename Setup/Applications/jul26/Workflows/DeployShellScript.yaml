@@ -28,10 +28,10 @@ phases:
       properties:
         commandPath: $HOME
         scriptType: BASH
-        host: 40.125.66.41
+        host: 35.233.241.71
         scriptString: echo hello
         timeoutMillis: 600000
-        sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
+        sshKeyRef: LYc9vVX0TW2BEjP1JkqvIw
         connectionType: SSH
         executeOnDelegate: false
     stepsInParallel: false
