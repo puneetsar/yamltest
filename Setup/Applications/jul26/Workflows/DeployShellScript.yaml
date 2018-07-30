@@ -31,7 +31,7 @@ phases:
         host: 35.233.241.71
         scriptString: echo hello
         timeoutMillis: 600000
-        sshKeyRef: LYc9vVX0TW2BEjP1JkqvIw
+        sshKeyRef: 4XusiUX4SrK2l--J9z0PBA
         connectionType: SSH
         executeOnDelegate: false
     stepsInParallel: false
