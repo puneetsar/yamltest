@@ -22,6 +22,18 @@ phases:
   phaseSteps:
   - type: CONTAINER_SETUP
     name: Setup Container
+    steps:
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: $HOME
+        scriptType: BASH
+        host: 40.125.66.41
+        scriptString: echo hello
+        timeoutMillis: 600000
+        sshKeyRef: OnP7d9irT1CBDqiu-TpDsQ
+        connectionType: SSH
+        executeOnDelegate: false
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
