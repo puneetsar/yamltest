@@ -1,0 +1,9 @@
+harnessApiVersion: '1.0'
+type: GCP_KUBERNETES
+cluster: us-central1-a/istio-cluster
+computeProviderName: harness-exploration
+computeProviderType: GCP
+deploymentType: KUBERNETES
+infraMappingType: GCP_KUBERNETES
+namespace: puneet
+serviceName: helloworld
