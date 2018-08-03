@@ -26,7 +26,7 @@ phases:
     - type: KUBERNETES_SETUP
       name: Kubernetes Service Setup
       properties:
-        serviceType: ClusterIP
+        serviceType: LoadBalancer
         replicationControllerName: ${app.name}-${service.name}-${env.name}
         fixedInstances: '2'
         protocol: TCP
@@ -51,7 +51,7 @@ phases:
                   servicePort: ${SERVICE_PORT}
         desiredInstanceCount: fixedInstances
         useIngress: false
-        targetPort: 80
+        targetPort: 8080
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
