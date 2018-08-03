@@ -51,7 +51,7 @@ phases:
                   servicePort: ${SERVICE_PORT}
         desiredInstanceCount: fixedInstances
         useIngress: false
-        targetPort: 8080
+        targetPort: 80
         resizeStrategy: RESIZE_NEW_FIRST
         serviceSteadyStateTimeout: 10
     stepsInParallel: false
