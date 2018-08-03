@@ -106,6 +106,27 @@ phases:
   provisionNodes: false
   serviceName: helloworld
   statefulSet: false
+- type: KUBERNETES
+  computeProviderName: harness-exploration
+  daemonSet: false
+  infraMappingName: infra
+  name: Phase 3
+  phaseSteps:
+  - type: CONTAINER_DEPLOY
+    name: Deploy Containers
+    steps:
+    - type: KUBERNETES_DEPLOY
+      name: Upgrade Containers
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: helloworld
+  statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: harness-exploration
@@ -147,6 +168,32 @@ rollbackPhases:
   infraMappingName: infra
   name: Rollback Phase 2
   phaseNameForRollback: Phase 2
+  phaseSteps:
+  - type: CONTAINER_DEPLOY
+    name: Deploy Containers
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    steps:
+    - type: KUBERNETES_DEPLOY_ROLLBACK
+      name: Rollback Containers
+    stepsInParallel: false
+  - type: VERIFY_SERVICE
+    name: Verify Service
+    phaseStepNameForRollback: Deploy Containers
+    statusForRollback: SUCCESS
+    stepsInParallel: false
+  - type: WRAP_UP
+    name: Wrap Up
+    stepsInParallel: false
+  provisionNodes: false
+  serviceName: helloworld
+  statefulSet: false
+- type: KUBERNETES
+  computeProviderName: harness-exploration
+  daemonSet: false
+  infraMappingName: infra
+  name: Rollback Phase 3
+  phaseNameForRollback: Phase 3
   phaseSteps:
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
