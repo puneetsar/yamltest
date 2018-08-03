@@ -5,5 +5,5 @@ computeProviderName: harness-exploration
 computeProviderType: GCP
 deploymentType: KUBERNETES
 infraMappingType: GCP_KUBERNETES
-namespace: puneet
+namespace: default
 serviceName: helloworld
