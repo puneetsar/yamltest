@@ -53,7 +53,7 @@ phases:
           gateways:
           - bookinfo-gateway
           hosts:
-          - example.com
+          - example.org
         useIstioRouteRule: true
         port: 80
         desiredInstanceCount: fixedInstances
