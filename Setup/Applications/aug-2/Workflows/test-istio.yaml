@@ -56,6 +56,10 @@ phases:
           hosts:
           - example.com
           - ' example1'
+          - ' '
+          - ' '
+          - ' '
+          - ' '
         useIstioRouteRule: true
         port: 80
         desiredInstanceCount: fixedInstances
