@@ -75,6 +75,14 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
+    steps:
+    - type: HTTP
+      name: HTTP
+      properties:
+        method: GET
+        assertion: ${httpResponseCode}==404
+        executeWithPreviousSteps: false
+        url: https://google.com
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
