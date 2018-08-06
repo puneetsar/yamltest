@@ -136,6 +136,13 @@ phases:
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
+    steps:
+    - type: HTTP
+      name: HTTP
+      properties:
+        method: GET
+        executeWithPreviousSteps: false
+        url: failme
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
