@@ -165,6 +165,8 @@ rollbackPhases:
     steps:
     - type: KUBERNETES_DEPLOY_ROLLBACK
       name: Rollback Containers
+      properties:
+        rollbackAllPhases: true
     stepsInParallel: false
   - type: CONTAINER_SETUP
     name: Setup Container
