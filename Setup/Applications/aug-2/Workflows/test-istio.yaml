@@ -67,7 +67,7 @@ phases:
         commandName: Resize Replication Controller
         instanceUnitType: PERCENTAGE
         instanceCount: '100'
-        trafficPercent: '50'
+        trafficPercent: '10'
         downsizeInstanceCount: '100'
     stepsInParallel: false
   - type: VERIFY_SERVICE
